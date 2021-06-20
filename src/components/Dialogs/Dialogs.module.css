@@ -1,0 +1,43 @@
+.dialogs {
+    display: grid;    
+    grid-template-columns: 2fr 5fr;             
+}
+
+a {
+    text-decoration: none;
+}
+
+.dialogsItems {
+    padding: 10px;
+}
+
+.dialogsItems .active {
+    color: gold;
+}
+
+.messageArea {
+    display: grid;   
+    grid-template-columns: 1fr 10fr 1fr 10fr;
+    /*grid-template-rows: 1fr 1fr;*/
+}
+
+.dialogsItems img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 5px;
+    vertical-align: middle;  
+}
+
+.circleBase {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 100%;    
+    background: rgba(240, 255, 28, 0.459);
+    vertical-align: middle;    
+}
+

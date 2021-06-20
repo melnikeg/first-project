@@ -1,0 +1,21 @@
+.friends {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+a {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.friendsItems {
+    padding: 10px;    
+}
+
+.friendsItems img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 5px;
+    vertical-align: middle;
+}
