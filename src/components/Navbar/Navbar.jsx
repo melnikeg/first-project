@@ -20,7 +20,7 @@ const Navbar = (props) => {
     <div className={s.item}>
       <NavLink to='/settings' activeClassName={s.activeLink}>Settings</NavLink>
     </div>
-    <div className={s.friends}>
+   {/*  <div className={s.friends}>
       <NavLink to='/friends' activeClassName={s.activeLink}>Friends</NavLink>
       <div className={s.friendsItem}>
         <div className={s.circleBase}></div>
@@ -30,7 +30,7 @@ const Navbar = (props) => {
         <div className={s.friendsName}>{props.state.friends[1].name}</div>
         <div className={s.friendsName}>{props.state.friends[2].name}</div>
       </div>
-    </div>
+    </div> */}
   </nav>
 }
 
