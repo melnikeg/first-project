@@ -6,20 +6,18 @@ import DialogItem from './DialogItem/DialogItem';
 const Dialogs = (props) => {
 
     let state = props.dialogsPage;
-    
+
     let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />)
-
     let messageElements = state.messages.map(m => <Message message={m.message} />)
+    let newMessageBody = state.newMessageText;
 
-    let newMessageBody = state.newMessgeBody;
-   
     let onSendMessageClick = () => {
-        props.sendMessage();         
+        props.sendMessage();
     }
-    
-    let onMassegeChange = (e) => {        
+
+    let onMassegeChange = (e) => {
         let body = e.target.value;
-        props.updateNewMessgeBody(body);       
+        props.updateNewMessgeBody(body);
     }
 
     return (
@@ -28,29 +26,29 @@ const Dialogs = (props) => {
                 {dialogsElements}
             </div>
             <div>
-                <div className={s.messageArea}>                    
-                        <div>
-                            <span className={s.circleBase}></span>
-                        </div>
-                        <div>
-                            {messageElements}
-                        </div>                   
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>                        
-                        <div >
-                            <span className={s.circleBase}></span>
-                        </div>
-                        <div>
-                            {messageElements}
-                        </div>                    
+                <div className={s.messageArea}>
+                    <div>
+                        <span className={s.circleBase}></span>
+                    </div>
+                    <div>
+                        {messageElements}
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div >
+                        <span className={s.circleBase}></span>
+                    </div>
+                    <div>
+                        {messageElements}
+                    </div>
                 </div>
                 <div>
-                    <textarea placeholder='Enter your message' onChange={ onMassegeChange } value={newMessageBody}/>
-                    <div>
-                        <button onClick={ onSendMessageClick }>Add message</button>
-                    </div>
+                    <div><textarea placeholder='Enter your message'
+                        onChange={onMassegeChange}
+                        value={newMessageBody}></textarea></div>
+                    <div><button onClick={onSendMessageClick}>Send</button></div>
                 </div>
             </div>
         </div>

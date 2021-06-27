@@ -23,9 +23,9 @@ const App = (props) => {
         <Route path='/news' render={() => <News />} />
         <Route path='/music' render={() => <Music />} />
         <Route path='/settings' render={() => <Settings />} />
-        {/* <div className='friends'>
-          <Route path='/friends' render={() => <Friends state={store.getState().sidebar} />} />
-        </div> */}
+        <div className='friends'>
+          <Route path='/friends' render={() => <Friends /* state={props.store.getState().sidebar} */ />} />
+        </div>
       </div>
     </div>
   );
