@@ -1,13 +1,10 @@
 import React from 'react';
 import s from './Friends.module.css';
 import FriendItem from './FriendItem/FriendItem';
-import StoreContext from '../../StoreContext';
 
 const Friends = (props) => {
-
-    return <StoreContext.Consumer>
-        { (store) => {
-            let state = store.getState().sidebar;
+          
+            /* let state = store.getState().sidebar;
             let friendsElements = state.friends.map(d => <FriendItem name={d.name} id={d.id} />);
             return (            
                 <div className={s.friends}>
@@ -15,10 +12,12 @@ const Friends = (props) => {
                         {friendsElements}
                     </div>
                 </div>
-            )
-        }
-        }
-    </StoreContext.Consumer>
+            ) */
+        return (
+            <div className={s.friendsItems}>
+                Here my friends
+            </div>
+        )            
 }
 
 export default Friends;
